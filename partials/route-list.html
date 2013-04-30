@@ -1,0 +1,35 @@
+<form class="form-horizontal padded">
+
+    <div class="control-group">
+        <label class="control-label">Gemeente</label>
+        <div class="controls">
+            <select class="input-medium" ng-model="city">
+                <option ng-repeat="city in cities" value="[[ city.id ]]">[[ city.name ]]</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="control-group" ng-show="routes.length">
+        <label class="control-label">[[routes.length ]] Routes</label>
+        <div class="controls">
+            <ul class="route-list">
+                <li class="route" ng-repeat="route in routes">
+                    <div class="length">
+                        [[ route.length / 1000 | ceil ]]<br />
+                        <small>KM</small>
+                    </div>
+                    <div>
+                        <a href="#/route/[[ city ]]/[[ route.otn_id ]]">
+                            <span class="title" title="[[ route.title ]]">[[ route.title ]]</span>
+                            <span class="description">[[ route.description ]]</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</form>
+
+<div ng-show="routesError">
+Error loading routes
+</div>
