@@ -1,0 +1,20 @@
+body{position:relative;min-width:100%;min-height:100%;background:#f1f1f1;}
+.btn-primary{background:#29b766;color:#fff;border:1px solid #93e7b7;}.btn-primary.active{background:#69dd9b;box-shadow:inset 2px 2px 4px rgba(0, 0, 0, 0.35);border:1px solid #fff;}
+.btn-primary:hover{background:#40d47f;border:1px solid #fff;}
+.content-wrapper{position:absolute;top:0;right:0;bottom:0;left:0;}.content-wrapper .header{height:42px;background:#2ecc72;color:#fff;text-align:center;font-size:24px;padding-top:10px;text-shadow:0px 1px 1px rgba(0, 0, 0, 0.35);}.content-wrapper .header .pull-left{position:absolute;left:4px;top:4px;font-size:11px;}
+.content-wrapper .header .pull-right{position:absolute;right:4px;top:4px;font-size:11px;}
+.content-wrapper .header .title{position:absolute;left:90px;right:60px;top:0;bottom:0;line-height:42px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}.content-wrapper .header .title.smaller{font-size:18px;}
+.content-wrapper .content{position:absolute;top:42px;right:0;bottom:0;left:0;overflow-x:hidden;overflow-y:auto;}.content-wrapper .content .control-group{margin-bottom:20px;}
+.padded{padding:10px 10px;}
+.map{position:absolute;top:0;right:0;bottom:0;left:0;background:green;}
+.route-list{margin:0 -10px;}.route-list li{padding:10px 10px;border-bottom:1px solid #ddd;display:block;list-style-type:none;}.route-list li:before,.route-list li:after{content:" ";display:table;}
+.route-list li:after{clear:both;}
+.route-list li div{float:left;width:220px;}
+.route-list li .length{width:60px;color:#25a25b;text-align:center;font-size:34px;line-height:24px;padding-top:24px;}.route-list li .length small{font-size:12px;}
+.route-list li .title{display:block;font-size:18px;font-weight:bold;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.route-list li .show-less,.route-list li .show-more{display:block;}
+.route-list li a{color:#555;}.route-list li a:hover{color:#777;text-decoration:none;}
+.route-list li:nth-child(2n+1){background:#fff;}
+.route-list li:first-child{border-top:1px solid #ddd;}
+.locate{position:absolute;z-index:999;bottom:5px;left:50%;margin-left:-22px;}
+.desktop{background:#ffffff url(/public/image/iphone.png) 50% 50% no-repeat;}.desktop .content-wrapper{background:#f1f1f1;position:absolute;width:320px;height:568px;left:50%;top:50%;margin-top:-284px;margin-left:-160px;border:1px solid #777;}
