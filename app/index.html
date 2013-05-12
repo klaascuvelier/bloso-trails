@@ -1,0 +1,47 @@
+<html ng-app="BlosoApp">
+    <head>
+        <title>BlosoTrails beta</title>
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+        <link type="text/css" rel="stylesheet" href="css/bloso.css" />
+
+        <meta name="apple-mobile-web-app-title" content="Blosotrails">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="shortcut icon" href="icons/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="icons/touch-icon-144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="icons/touch-icon-114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icons/touch-icon-72.png">
+        <link rel="apple-touch-icon-precomposed" href="icons/touch-icon.png">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+    </head>
+    <body ng-controller="BlosoController">
+
+        <div class="content-wrapper">
+            <div class="header">
+                <a href="#/select" class="btn btn-primary btn-back pull-left" ng-show="page == 'route'">Overview</a>
+                <span class="title" ng-show="page == 'routes'">BlosoTrails</span>
+                <span class="title smaller" ng-show="page == 'route'">[[ currentRoute.title ]]</span>
+                <a href="#" class="btn btn-primary pull-right" ng-show="page == 'route'">Info</a>
+                <a href="#/about" class="btn btn-primary pull-right" ng-show="page == 'routes'">About</a>
+            </div>
+
+            <div class="content">
+                <ng-view></ng-view>
+            </div>
+        </div>
+
+        <script src="js/vendor/angular.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controller/bloso.controller.js"></script>
+        <script src="js/controller/select.controller.js"></script>
+        <script src="js/services/bloso.service.js"></script>
+        <script src="js/filter/math.filter.js"></script>
+
+        <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyC0lZOxeXGKTR01vTlvxOUDB9SGGimI-to&sensor=false"></script>
+        <script>
+            if (!'ontouchstart' in document) {
+                document.body.class += 'desktop';
+            }
+        </script>
+    </body>
+</html>
