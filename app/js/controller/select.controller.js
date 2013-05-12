@@ -1,6 +1,12 @@
 //
 // Controller for selecting citie and route
 //
-BloseApp.controller('SelectController', ['$scope', function ($scope) {
+BlosoApp.controller('SelectController', ['$scope', '$bloso', function ($scope, $bloso) {
+
+    $scope.$watch('cityId', function () {
+        if ($scope.cityId) {
+            $bloso.setCityId($scope.cityId);
+        }
+    });
 
 }]);
