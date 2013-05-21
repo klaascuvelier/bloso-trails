@@ -13,7 +13,7 @@
     </target>
 
     <target name="path">
-        <echo message="$PATH" />
+        <echo message="${PATH}" />
     </target>
 
     <target name="karma-unit" >
