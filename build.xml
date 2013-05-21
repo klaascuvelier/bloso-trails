@@ -12,8 +12,13 @@
         <mkdir dir="${basedir}/build/karma"/>
     </target>
 
+    <target name="path">
+        <exec executable="echo $PATH">
+        </exec>
+    </target>
+
     <target name="karma-unit" >
-        <exec executable="/usr/local/bin/karma" failonerror="true">
+        <exec executable="karma" failonerror="true">
             <arg value="start"/>
             <arg value="${basedir}/config/karma-unit.jenkins.config.js"/>
         </exec>
