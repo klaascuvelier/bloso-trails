@@ -1,3 +1,3 @@
 'use strict';
 
-beforeEach(module('BlosoApp'));
+beforeEach(angular.mock.module('BlosoApp'));
