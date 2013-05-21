@@ -2,13 +2,21 @@
 
 <project name="BlosoTrails" default="build">
 
-    <target name="karma-unit" depends="build">
-        <echo msg="Testing karma-unit..." />
-        <exec command="karma start --no-auto-watch --single-run --browsers PhantomJS karma.jenkins.conf.js" checkreturn="true" logoutput="/dev/stdout" />
+    <target name="build" depends="prepare,karma-unit"/>
+
+    <target name="clean" description="Cleanup build artifacts">
+        <delete dir="${basedir}/build/karma" />
     </target>
 
-    <!-- <target name="karma-e2e" depends="build">
-        <echo msg="Testing karma-e2e..." />
-        <exec command="karma start --no-auto-watch --single-run --browsers PhantomJS config/karma-e2e.conf.js" checkreturn="true" logoutput="/dev/stdout" />
-    </target> -->
+     <target name="prepare" depends="clean" description="Prepare for build">
+        <mkdir dir="${basedir}/build/karma"/>
+    </target>
+
+    <target name="karma-unit" >
+        <exec executable="karma" failonerror="true">
+            <arg value="start"/>
+            <arg value="${basedir}/config/karma-unit.jenkins.config.js"/>
+        </exec>
+    </target>
+
 </project>

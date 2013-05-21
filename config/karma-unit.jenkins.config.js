@@ -3,7 +3,7 @@
 
 
 // base path, that will be used to resolve files and exclude
-basePath = '';
+basePath = '../';
 
 
 // list of files / patterns to load in the browser
@@ -24,6 +24,13 @@ files = [
   'test/unit/**/*.js'
 ];
 
+preprocessors = {
+    'app/js/app*.js' : 'coverage',
+    'app/js/controller/*.js' : 'coverage',
+    'app/js/services/*.js' : 'coverage',
+    'app/js/filter/*.js' : 'coverage'
+}
+
 
 // list of files to exclude
 exclude = [
@@ -33,11 +40,17 @@ exclude = [
 
 // test results reporter to use
 // possible values: 'dots', 'progress', 'junit'
-reporters = ['dots', 'junit'];
+reporters = ['dots', 'junit', 'coverage'];
 
 junitReporter = {
-  outputFile: 'test-results.xml'
+  outputFile: 'build/karma/test-results.xml'
 };
+
+coverageReporter = {
+  type : 'cobertura',
+  dir : 'build/karma/coverage/',
+  file: 'coverage.xml'
+}
 
 // web server port
 port = 9876;
