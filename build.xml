@@ -2,7 +2,7 @@
 
 <project name="BlosoTrails" default="build">
 
-    <target name="build" depends="prepare,karma-unit"/>
+    <target name="build" depends="path,prepare,karma-unit"/>
 
     <target name="clean" description="Cleanup build artifacts">
         <delete dir="${basedir}/build/karma" />
