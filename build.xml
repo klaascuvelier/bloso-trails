@@ -13,8 +13,7 @@
     </target>
 
     <target name="path">
-        <exec executable="echo">
-            <arg value="${PATH}" />
+        <exec executable="echo" message="$PATH">
         </exec>
     </target>
 
