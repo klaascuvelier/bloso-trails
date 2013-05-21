@@ -13,7 +13,7 @@
     </target>
 
     <target name="karma-unit" >
-        <exec executable="karma" failonerror="true">
+        <exec executable="/usr/local/bin/karma" failonerror="true">
             <arg value="start"/>
             <arg value="${basedir}/config/karma-unit.jenkins.config.js"/>
         </exec>
