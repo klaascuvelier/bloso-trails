@@ -47,6 +47,35 @@ BlosoApp.factory('$bloso', ['$http', '$q', '$cache', 'url-cities', function $blo
             }
 
             return deferred.promise;
+        },
+
+        /**
+         * Store selected cityId
+         * @param {integer} cityId
+         * @return {$bloso}
+         */
+        setCityId: function (cityId) {
+            $cache.set('cityId', cityId);
+            return this;
+        },
+
+        /**
+         * Get selected cityId, if any
+         * @return {$q.deferred.promise}
+         */
+        getCityId: function () {
+            var deferred = $q.defer();
+
+            $cache.get('cityId').then(
+                function (data) {
+                    deferred.resolve(data);
+                },
+                function () {
+                    deferred.reject();
+                }
+            );
+
+            return deferred.promise;
         }
 
 
