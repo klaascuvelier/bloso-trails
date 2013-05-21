@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="BlosoTrails" default="build">
+
+    <target name="karma-unit" depends="build">
+        <echo msg="Testing karma-unit..." />
+        <exec command="karma start --no-auto-watch --single-run --browsers PhantomJS karma.jenkins.conf.js" checkreturn="true" logoutput="/dev/stdout" />
+    </target>
+
+    <!-- <target name="karma-e2e" depends="build">
+        <echo msg="Testing karma-e2e..." />
+        <exec command="karma start --no-auto-watch --single-run --browsers PhantomJS config/karma-e2e.conf.js" checkreturn="true" logoutput="/dev/stdout" />
+    </target> -->
+</project>
