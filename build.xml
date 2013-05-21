@@ -14,7 +14,7 @@
 
     <target name="path">
         <exec executable="echo">
-            <arg value="$PATH" />
+            <arg value="${PATH}" />
         </exec>
     </target>
 
