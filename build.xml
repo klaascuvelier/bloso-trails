@@ -18,7 +18,7 @@
 
     <target name="karma-unit" >
         <exec executable="karma" failonerror="true">
-            <env key="PATH" value="${env.PATH}:/usr/local/bin/" />
+            <env key="PATH" value="${env.PATH}:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/klaascuvelier/pear/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin" />
             <arg value="start"/>
             <arg value="${basedir}/config/karma-unit.jenkins.config.js"/>
         </exec>
