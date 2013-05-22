@@ -8,9 +8,6 @@ describe('service', function () {
             expect($bloso).not.toEqual(null);
         }));
 
-        it('should fail', inject(function ($bloso) {
-            expect(true).toEqual(false);
-        }));
 
 /*
         it('should have classes as items', inject(function($list) {
